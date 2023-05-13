@@ -63,15 +63,15 @@ jobs:
       run:
         shell: bash
 
-    steps:
-     - name: Change directory
-        working-directory: terraform
-        run: |
-          # Commands to be run in the my-folder directory
-          
+    steps:          
     # Checkout the repository to the GitHub Actions runner
     - name: Checkout
       uses: actions/checkout@v3
+      
+    - name: Change working directory to Terraform folder
+      working-directory: terraform
+      run: |
+      # Commands to be run in the terraform directory
 
     # Install the latest version of Terraform CLI and configure the Terraform CLI configuration file with a Terraform Cloud user API token
     - name: Setup Terraform
