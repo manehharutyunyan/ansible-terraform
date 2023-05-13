@@ -72,6 +72,10 @@ jobs:
       working-directory: terraform
       run: |
       # Commands to be run in the terraform directory
+      
+    - name: List files in the repository
+      run: |
+        ls ${{ github.workspace }}
 
     # Install the latest version of Terraform CLI and configure the Terraform CLI configuration file with a Terraform Cloud user API token
     - name: Setup Terraform
