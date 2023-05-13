@@ -42,7 +42,7 @@
 #       with:
 #         cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
 
-name: 'Terraform'
+name: 'onPush'
 
 on:
   push:
@@ -64,6 +64,11 @@ jobs:
         shell: bash
 
     steps:
+     - name: Change directory
+        working-directory: terraform
+        run: |
+          # Commands to be run in the my-folder directory
+          
     # Checkout the repository to the GitHub Actions runner
     - name: Checkout
       uses: actions/checkout@v3
