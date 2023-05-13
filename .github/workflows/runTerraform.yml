@@ -62,16 +62,12 @@ jobs:
     defaults:
       run:
         shell: bash
+        working-directory: ./terraform
 
     steps:          
     # Checkout the repository to the GitHub Actions runner
     - name: Checkout
       uses: actions/checkout@v3
-      
-    - name: Change working directory to Terraform folder
-      working-directory: ${{ github.workspace }}/terraform
-      run: |
-      # Commands to be run in the terraform directory
       
     - name: List files in the repository
       run: |
