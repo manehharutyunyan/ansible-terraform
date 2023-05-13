@@ -69,7 +69,7 @@ jobs:
       uses: actions/checkout@v3
       
     - name: Change working directory to Terraform folder
-      working-directory: terraform
+      working-directory: ${{ github.workspace }}/terraform
       run: |
       # Commands to be run in the terraform directory
       
