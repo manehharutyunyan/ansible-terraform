@@ -1,4 +1,4 @@
-name: Test project
+name: lsRepo
 run-name: ${{ github.actor }} testing
 on: [push]
 jobs:
